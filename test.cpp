@@ -1,13 +1,22 @@
-#include "global.hpp"
-#include "test.hpp"
+// #include "global.hpp"
+// #include "test.hpp"
+#include <iostream>
+// #include <string>
+#include "Sales_data.h"
 
-using namespace std;
 
-// extern const int TOTAL_SITE = 16;
 
-const int iSize = 16;  // isize must be initialized and can not be changed
+
+
+
+
 int main()
 {
+    Sales_data data1, data2;
+    
+    double price = 0.0;
+    std::cin>>data1.bookNo>>data1.units_sold>>price;
+    data1.revenue = data1.units_sold * price;       
 
     // cout << "hello world" << endl;
     // // template
@@ -45,16 +54,21 @@ int main()
 
     // // static array
 
-    int i = 1;
-    int j = 1;
-    if(i)
-        if(j)
-        {cout << "here";}
-    else
-    {
-        cout << "there";
-    }
+    // int i = 1;
+    // int j = 1;
+    // if(i)
+    // if(j)
+    // {cout << "here";}
+    // else
+    // {
+        // cout << "there";
+    // }
 
+
+    // cout<<hex<<100<<endl;
+
+
+    
     return 0;
 }
 

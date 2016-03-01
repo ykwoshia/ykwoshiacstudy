@@ -1,7 +1,7 @@
 # compile option
-CC   = g++ -g
+CC   = g++
 LINK = g++
-CFLAGS = -Wall
+CFLAGS = -g -Wall
 
 # -------------
 
@@ -24,8 +24,13 @@ all:   $(EXE)
 
 $(EXE):   ${OBJ}
 	$(MAKEEXE) $^ -o $@
-%.o:   %.cpp 
-	$(COMPILE.C) $< -o $@
+#%.o:   %.cpp 
+#	$(COMPILE.C) $< -o $@
+test.o:  test.cpp Sales_data.h  
+	$(COMPILE.C) test.cpp
+test1.o: test1.cpp global.hpp
+	$(COMPILE.C) test1.cpp
+
 clean:     
-	-rm -f *.o $(EXE)  
+	-rm -f *.o *.s $(EXE)  
 .PHONY: clean
