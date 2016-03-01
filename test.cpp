@@ -1,23 +1,28 @@
-#include "global.hpp"
-#include "test.hpp"
+// #include "global.hpp"
+// #include "test.hpp"
+#include <iostream>
+// #include <string>
+#include "Sales_data.h"
 
 
-using std::cin;
-using std::cout;
-using std::endl;
 
-// extern const int TOTAL_SITE = 16;
+
+
 
 
 int main()
 {
-
+    Sales_data data1, data2;
+    
+    double price = 0.0;
+    std::cin>>data1.bookNo>>data1.units_sold>>price;
+    data1.revenue = data1.units_sold * price;       
 
     // cout << "hello world" << endl;
     // // template
-    // int iNumber1 = 1 , iNumber2 = 2; 
-    // float fNumber1 = 1 , fNumber2 = 2; 
-   
+    // int iNumber1 = 1 , iNumber2 = 2;
+    // float fNumber1 = 1 , fNumber2 = 2;
+
     // cout << max(iNumber1, iNumber2) << endl;
 
     // // const local to file
@@ -33,14 +38,9 @@ int main()
 
     // cout << TOTAL_SITE << endl;    
 
-/*
- * 
- *     int i;
- *     int &j = i;
- *     int &k = j;
- *     cout << "i = " << i << "  j = " << j <<  "  k = " << k << endl;
- * 
- */
+
+
+    // // top level and low level const
     // int i = 0, *p = &i;
     // cout << *p << endl;
     // const int i = 100;
@@ -51,21 +51,24 @@ int main()
     /* cout << "*p = " << *p << endl; */
     // int*&l = p;
     // cout << "*l = " << l << endl;
-/*
- * 
- *     int i = 100;
- *     int &j = i;
- *     cout << "i = " << i << "  j = " << j << endl;
- *     j = 200;
- *     cout << "i = " << i << "  j = " << j << endl;
- */
 
-    typedef char *pstring;
-    const pstring cstr = 0;
-    const pstring *ps;
-    cout << "cstr = "<< *cstr << endl;
-    cout << "ps = "<< **ps << endl;
+    // // static array
 
-    return 0;   
+    // int i = 1;
+    // int j = 1;
+    // if(i)
+    // if(j)
+    // {cout << "here";}
+    // else
+    // {
+        // cout << "there";
+    // }
+
+
+    // cout<<hex<<100<<endl;
+
+
+    
+    return 0;
 }
 
