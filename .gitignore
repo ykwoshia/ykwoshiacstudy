@@ -1,0 +1,6 @@
+out
+tags
+*.o
+*.s
+*.org
+*.html

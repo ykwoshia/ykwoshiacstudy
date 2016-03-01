@@ -8,9 +8,10 @@ using std::endl;
 
 // extern const int TOTAL_SITE = 16;
 
-const int iSize = 16;  // isize must be initialized and can not be changed
+
 int main()
 {
+
 
     // cout << "hello world" << endl;
     // // template
@@ -40,8 +41,8 @@ int main()
  *     cout << "i = " << i << "  j = " << j <<  "  k = " << k << endl;
  * 
  */
-    int i = 0, *p = &i;
-    cout << *p << endl;
+    // int i = 0, *p = &i;
+    // cout << *p << endl;
     // const int i = 100;
     // const int*const p = &i;
     /* const int *l = p;  */
@@ -58,6 +59,12 @@ int main()
  *     j = 200;
  *     cout << "i = " << i << "  j = " << j << endl;
  */
+
+    typedef char *pstring;
+    const pstring cstr = 0;
+    const pstring *ps;
+    cout << "cstr = "<< *cstr << endl;
+    cout << "ps = "<< **ps << endl;
 
     return 0;   
 }
