@@ -1,36 +1,38 @@
-# compile option
-CC   = g++
-LINK = g++
-CFLAGS = -g -Wall
+# I am a comment, and I want to say that the variable CC will be
+# the compiler to use.
+CC=g++
+# Hey!, I am comment number 2. I want to say that CFLAGS will be the
+# options I'll pass to the compiler.
+CFLAGS=-c -Wall
 
-# -------------
+all: out
 
-COMPILE.C  = $(CC) -c 
-##### other path except current path
-#VPATH   = ../ : aa/bb
-#vpath %.h ../headers
-#vpath %.c ../src1
-#vpath % ../src2
-#vpath %.c ../src3
+out: test.o test1.o
+	$(CC) test.o test1.o -o out
 
-CXXFLAGS  =  -lgcc_s 
-MAKEEXE   = $(CC) $(LDFLAGS)
+test.o: test.cpp Sales_data.h
+	$(CC) $(CFLAGS) test.cpp
 
-########################## modify here
-OBJ   = test1.o test.o
-EXE   = out
-
-all:   $(EXE)
-
-$(EXE):   ${OBJ}
-	$(MAKEEXE) $^ -o $@
-#%.o:   %.cpp 
-#	$(COMPILE.C) $< -o $@
-test.o:  test.cpp Sales_data.h  
-	$(COMPILE.C) test.cpp
 test1.o: test1.cpp global.hpp
-	$(COMPILE.C) test1.cpp
+	$(CC) $(CFLAGS) test1.cpp
 
-clean:     
-	-rm -f *.o *.s $(EXE)  
-.PHONY: clean
+
+clean:
+	rm *.o out
+
+
+########################################################################
+#CC=g++
+#CFLAGS=-c -Wall
+#LDFLAGS=
+#SOURCES=test.cpp test1.cpp
+#OBJECTS=$(SOURCES:.cpp=.o)
+#EXECUTABLE=out
+#
+#all: $(SOURCES) $(EXECUTABLE)
+#    
+#$(EXECUTABLE): $(OBJECTS) 
+#	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+#
+#.cpp.o:
+#	$(CC) $(CFLAGS) $< -o $@
