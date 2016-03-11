@@ -1,5 +1,6 @@
 // #include "global.hpp"
 // #include "test.hpp"
+#include <vector>
 #include <iostream>
 // #include <string>
 #include "Sales_data.h"
@@ -8,7 +9,86 @@ using namespace std;
 
 int main()
 {
-    string word;
+    string a = "h";
+    vector<string> v(10,a);
+    vector<string>::iterator i;
+    for( i = v.begin(); i != v.end(); ++i )
+    {
+        *i += '1';
+        cout << *i << " ";
+    }
+
+    // string s;
+    // if(!s.empty())
+    // cout<<s[100]<<endl; 
+    // string word = "h1 ";
+    // for(uint i = 0; i < word.size(); i++)
+    // {
+    // if(isalnum(word[i])) 
+    // {
+    // cout << word[i] << " is alnum" << endl;
+    // }
+    // if(isalpha(word[i])) 
+    // {
+    // cout << word[i] << " is alpha" << endl;
+    // }
+    // if(iscntrl(word[i])) 
+    // {
+    // cout << word[i] << " is cntrl" << endl;
+    // }
+    // if(isdigit(word[i])) 
+    // {
+    // cout << word[i] << " is digit" << endl;
+    // }
+    // if(isgraph(word[i])) 
+    // {
+    // cout << word[i] << " is graph" << endl;
+    // }
+    // if(islower(word[i])) 
+    // {
+    // cout << word[i] << " is lower" << endl;
+    // }
+    // if(isprint(word[i])) 
+    // {
+    // cout << word[i] << " is print" << endl;
+    // }
+    // if(ispunct(word[i])) 
+    // {
+    // cout << word[i] << " is punct" << endl;
+    // }
+    // if(isspace(word[i])) 
+    // {
+    // cout << word[i] << " is space" << endl;
+    // }
+    // if(isupper(word[i])) 
+    // {
+    // cout << word[i] << " is upper" << endl;
+    // }
+    // if(isxdigit(word[i])) 
+    // {
+    // cout << word[i] << " is xdigit" << endl;
+    // }
+    // cout <<char(tolower(word[i]))<< " to lower" << endl;
+    // cout << char(toupper( word[i] )) << " to upper" << endl;
+    // }
+    // // while(getline(cin,word))
+    // {
+    // cout << word << endl;
+    // }
+    // string str1(10,'c'),str2;
+    // cout<<str1<<endl;
+    // int
+    // endl
+    // str1=str2;
+    //cout 
+    // int i = 0xFF;
+    // int b = 0x11;
+    // int c = i & b;
+    // cout<<c<<endl;
+    // cout<<hex<<c<<endl;
+    // char a[5] = "1234";
+    // cout << a << endl;
+    // string word;
 
     // while(cin>>word)
     // {
@@ -17,12 +97,12 @@ int main()
 
     // while(getline(cin, word))
     // {
-        // cout << word << endl;
+    // cout << word << endl;
     // }
 
-    word = "how old are you";
-    int i = word.size();
-    cout<< i << endl;
+    // word = "how old are you";
+    // int i = word.size();
+    // cout<< i << endl;
 
     // string abc("how are you");
     // cout << abc << endl;
