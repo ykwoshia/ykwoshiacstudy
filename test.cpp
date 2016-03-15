@@ -3,20 +3,48 @@
 #include <vector>
 #include <iostream>
 // #include <string>
-#include "Sales_data.h"
+// #include "Sales_data.h"
 using namespace std;
 
 
 int main()
 {
-    string a = "h";
-    vector<string> v(10,a);
-    vector<string>::iterator i;
-    for( i = v.begin(); i != v.end(); ++i )
-    {
-        *i += '1';
-        cout << *i << " ";
-    }
+    // signed int is size_t
+    // int b[10] = {};
+    // int a = 0;
+    // for(;a<10;a++)
+    // {
+        // cout<<b[a]<<endl;
+    // }
+    // const int a = 5;
+    // int b[a] = {1,2};
+    // for (int i = 0; i< 5; i++)
+    // {
+        // cout << b[i] << endl;
+    // }
+    // string a = "h";
+    // vector<string> v;
+    // v.push_back("1");
+    // v.push_back("2");
+    // v.push_back("3");
+    // v.push_back("4");
+    // v.push_back("5");
+    // v.push_back("6");
+    // v.push_back("7");
+    // v.push_back("8");
+    // vector<string>::iterator i;
+    // i = v.end()-1;
+
+    // // i = v.begin() + 3/2;
+    // cout << *i<<endl;
+    // int j = v.end() - v.begin();
+    // cout << j << endl;
+
+    // for( i = v.begin(); i != v.end(); ++i )
+    // {
+        // *i += '1';
+        // cout << *i << " ";
+    // }
 
     // string s;
     // if(!s.empty())
@@ -174,8 +202,44 @@ int main()
 
     // cout<<hex<<100<<endl;
 
-
+    // string a="hello world";
+    // cout<<a.begin() - a.end()<<endl;
     
-    return 0;
+    // int a[] = { 1, 3, 5, 7, 9 };
+    // cout << *(a+1) <<endl;
+    // int *p = &a[3];
+    // cout<<p[1]<<endl;
+    // return 0;
+    // vector<int> ivec(a,a+4);
+    // vector<int> ivec(a,a+3);
+    // vector<int>::iterator i;
+    // for(i=ivec.begin(); i<ivec.end();i++)
+    // {
+        // cout<<*i<<endl;
+    // }
+
+    // string a("he");
+    // cout<<a.size()<<endl;
+    // const char *str = a.c_str();
+    // cout << str << endl;
+    //
+    //
+
+    // expressions
+
+
+
+
+    // int ia[] = {0,2,4,6,8};
+    // int *p = ia;
+    // cout<<*(p+4)<<endl;
+    // cout<<*(ia+4)<<endl;
+    // cout << 5 + 10 * 20 / 2 << endl;
+
+    cout << 20 / 5 << endl;
+    cout << -20 / 5 << endl;
+    cout << 20 / -5 << endl;
+    cout << -20 / -5 << endl;
+
 }
 
