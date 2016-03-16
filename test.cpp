@@ -236,10 +236,28 @@ int main()
     // cout<<*(ia+4)<<endl;
     // cout << 5 + 10 * 20 / 2 << endl;
 
-    cout << 20 / 5 << endl;
-    cout << -20 / 5 << endl;
-    cout << 20 / -5 << endl;
-    cout << -20 / -5 << endl;
+    // cout << 20 / 5 << endl;
+    // cout << -20 / 5 << endl;
+    // cout << 20 / -5 << endl;
+    // cout << -20 / -5 << endl;
+
+    // int i = 0, j = 0;
+    // if(i==j)
+    // {
+        // cout<<i<<endl;
+    // }
+
+    // vector<int> ia;
+    // ia.push_back(1);
+    // ia.push_back(2);
+    // ia.push_back(3);
+    // ia.push_back(4);
+    // ia.push_back(5);
+    // vector<int>::iterator p;
+    // for(p=ia.begin();p!=ia.end();)
+    // {
+        // cout << *p++ << " endl"<<endl;
+    // }
 
 }
 
