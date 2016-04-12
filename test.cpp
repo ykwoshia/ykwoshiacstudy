@@ -2,17 +2,160 @@
 // #include "test.hpp"
 #include <vector>
 #include <iostream>
+// #include <cassert.h>
 // #include <string>
-// #include "Sales_data.h"
+#include "Sales_data.h"
 using namespace std;
 
-
-int main()
+void swap(int *a, int *b)
 {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+
+void swap2(int &a, int &b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+bool larger(const int &a, const int &b)
+{
+    return a > b;
+}
+
+int& get( int *a, int b)
+{
+
+    return a[b];
+}
+
+int fff(int val)
+{
+    if(val>1)
+    {
+        cout<<val<<endl;
+        return fff(val-1)*val;
+    }
+    return 1;
+}
+
+bool eq1(const string& a, const string&b)
+{
+    return a == b;
+}
+
+
+void print(const string& a)
+{
+    cout<<a<<endl;
+}
+void print(double a)
+{
+    cout<<a<<endl;
+}
+void test()
+{
+    void print(int a);
+    // print("hello");
+    // print(1.2);
+    print(1);
+}
+void print(int a)
+{
+    cout<<a<<endl;
+}
+typedef string::size_type sz;
+// default arguments can not use local variable
+void screen(sz h = 100, sz w=40, char b = 'a')
+{
+    cout << h << endl;
+    cout << w << endl;
+    cout << b << endl;
+}
+
+void print(const int ia[], size_t t)
+{
+#ifndef NDEBUG
+    cerr << "Error: " << __FILE__
+        << " : in function " << __func__
+        << " at line " << __LINE__ << endl
+        << " compiled on " __DATE__
+        << " at " << __TIME__ << endl
+        << __func__ << " array size is " << t << endl;
+#endif
+}
+
+
+int main(int argc, char**argv)
+{
+
+    
+    // fff(2);
+    // int (*aaa)(int);
+    // aaa = fff;
+    // aaa(2);
+    // int ia[4] = {1, 2, 3, 4};
+    // print(ia, 5);
+
+    // void (*pf)(const int ia[], size_t t);
+
+    // pf = print;
+    // print(ia,5);
+
+    // while(cin>>word)
+    // {
+        // cout<<word<<endl;
+    // }
+    // test();
+    // k
+    // int ia[10];
+    // for(int i=0; i<10; ++i)
+    // {
+        // get(ia,i) = i;
+    // }
+    // for(int j=0; j<10; ++j)
+    // {
+        // cout<<ia[j]<<endl;
+    // }
+    // if(0)
+        // return EXIT_FAILURE;
+    // else
+        // return EXIT_SUCCESS;
+
+    // int a[5];
+    // bigger(a,3) = 4;
+    // cout<<a[3]<<endl;
+
+    // int n = 0, i = 42;
+
+
+    // cout << n << endl;
+    // cout << i << endl;
+    // swap2(n,i);
+    // cout << n << endl;ññ:
+    // cout << i << endl;
+
+
+    // if(larger(n,i))
+    // {
+        // cout<<"n is larger";
+    // }
+    // // *p = 42;
+    // cout<<n<<endl;
+    // p = q;
+    // cout<<n<<endl;
+
+
+
+
     // signed int is size_t
-    // int b[10] = {};
     // int a = 0;
-    // for(;a<10;a++)
+    // int b[10];
+    // for(int a = 0; a < 10; a++)
     // {
         // cout<<b[a]<<endl;
     // }
@@ -28,12 +171,12 @@ int main()
     // v.push_back("2");
     // v.push_back("3");
     // v.push_back("4");
-    // v.push_back("5");
+    // v.push_back("5";
     // v.push_back("6");
     // v.push_back("7");
     // v.push_back("8");
     // vector<string>::iterator i;
-    // i = v.end()-1;
+    // i = v.end()-1
 
     // // i = v.begin() + 3/2;
     // cout << *i<<endl;
@@ -48,51 +191,51 @@ int main()
 
     // string s;
     // if(!s.empty())
-    // cout<<s[100]<<endl; 
+    // cout<<s[100]<<endl;
     // string word = "h1 ";
     // for(uint i = 0; i < word.size(); i++)
     // {
-    // if(isalnum(word[i])) 
+    // if(isalnum(word[i]))
     // {
     // cout << word[i] << " is alnum" << endl;
     // }
-    // if(isalpha(word[i])) 
+    // if(isalpha(word[i]))
     // {
     // cout << word[i] << " is alpha" << endl;
     // }
-    // if(iscntrl(word[i])) 
+    // if(iscntrl(word[i]))
     // {
     // cout << word[i] << " is cntrl" << endl;
     // }
-    // if(isdigit(word[i])) 
+    // if(isdigit(word[i]))
     // {
     // cout << word[i] << " is digit" << endl;
     // }
-    // if(isgraph(word[i])) 
+    // if(isgraph(word[i]))
     // {
     // cout << word[i] << " is graph" << endl;
     // }
-    // if(islower(word[i])) 
+    // if(islower(word[i]))
     // {
     // cout << word[i] << " is lower" << endl;
     // }
-    // if(isprint(word[i])) 
+    // if(isprint(word[i]))
     // {
     // cout << word[i] << " is print" << endl;
     // }
-    // if(ispunct(word[i])) 
+    // if(ispunct(word[i]))
     // {
     // cout << word[i] << " is punct" << endl;
     // }
-    // if(isspace(word[i])) 
+    // if(isspace(word[i]))
     // {
     // cout << word[i] << " is space" << endl;
     // }
-    // if(isupper(word[i])) 
+    // if(isupper(word[i]))
     // {
     // cout << word[i] << " is upper" << endl;
     // }
-    // if(isxdigit(word[i])) 
+    // if(isxdigit(word[i]))
     // {
     // cout << word[i] << " is xdigit" << endl;
     // }
@@ -108,7 +251,7 @@ int main()
     // int
     // endl
     // str1=str2;
-    //cout 
+    //cout
     // int i = 0xFF;
     // int b = 0x11;
     // int c = i & b;
@@ -135,7 +278,7 @@ int main()
     // string abc("how are you");
     // cout << abc << endl;
     // cout << abc.size() << endl;
-    
+
     // string def = string(10,'c');
     // cout << def << endl;
     // cout << def.size()<<endl
@@ -148,10 +291,10 @@ int main()
     // cin>>i;
     // cout<<i<<endl;
     // Sales_data data1, data2;
-    
+
     // double price = 0.0;
     // std::cin>>data1.bookNo>>data1.units_sold>>price;
-    // data1.revenue = data1.units_sold * price;       
+    // data1.revenue = data1.units_sold * price;
 
     // cout << "hello world" << endl;
     // // template
@@ -171,7 +314,7 @@ int main()
     // cout << "k = " << k << endl;
     // cout << "l = " << l << endl;
 
-    // cout << TOTAL_SITE << endl;    
+    // cout << TOTAL_SITE << endl;
 
 
 
@@ -204,7 +347,7 @@ int main()
 
     // string a="hello world";
     // cout<<a.begin() - a.end()<<endl;
-    
+
     // int a[] = { 1, 3, 5, 7, 9 };
     // cout << *(a+1) <<endl;
     // int *p = &a[3];
@@ -246,6 +389,7 @@ int main()
     // {
         // cout<<i<<endl;
     // }
+    //
 
     // vector<int> ia;
     // ia.push_back(1);
@@ -258,6 +402,32 @@ int main()
     // {
         // cout << *p++ << " endl"<<endl;
     // }
+
+    // int i = 10;
+
+    // switch(i)
+    // {
+        // case 1: case 2: case 3: case 10:
+         // cout<<"bingo"<<endl;
+         // break;
+    // }
+
+    // int a = 10, b = 0;
+
+    // int c;
+    // try
+    // {
+        // // throw 1;
+        // c = a/b;
+    // }
+    // catch(int e)
+    // {
+        // cout<<e<<endl;
+    // }
+    // cout<<"done"<<endl;
+
+
+
 
 }
 
