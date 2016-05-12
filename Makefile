@@ -3,18 +3,16 @@
 CC=g++
 # Hey!, I am comment number 2. I want to say that CFLAGS will be the
 # options I'll pass to the compiler.
-CFLAGS=-c -Wall
+CFLAGS=-c -std=c++11 -Wall
 
 all: out
 
-out: test.o test1.o
-	$(CC) test.o test1.o -o out
+out: test.o
+	$(CC) test.o -o out
 
-test.o: test.cpp Sales_data.h
+test.o: test.cpp
 	$(CC) $(CFLAGS) test.cpp
 
-test1.o: test1.cpp global.hpp
-	$(CC) $(CFLAGS) test1.cpp
 
 
 clean:
